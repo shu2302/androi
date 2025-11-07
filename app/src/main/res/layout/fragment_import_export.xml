@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_bg"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Nguyên liệu"
+            app:boxStrokeColor="@color/text_input_color"
+            app:hintTextColor="@color/text_input_color">
+
+            <AutoCompleteTextView
+                android:id="@+id/ingredientDropdownInTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:dropDownHeight="wrap_content"
+                android:focusable="true"
+                android:importantForAccessibility="no"
+                android:inputType="none"
+                android:padding="8dp"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Số lượng"
+            app:boxStrokeColor="@color/text_input_color"
+            app:hintTextColor="@color/text_input_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtIngredientQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Giá tiền"
+            app:boxStrokeColor="@color/text_input_color"
+            app:hintTextColor="@color/text_input_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtIngredientPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Đơn vị"
+            app:boxStrokeColor="@color/text_input_color"
+            app:hintTextColor="@color/text_input_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtIngredientUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loại giao dịch"
+            android:textSize="18dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_transaction_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioImport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Nhập" />
+
+            <RadioButton
+                android:id="@+id/radioExport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xuất" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Ngày giao dịch"
+                app:boxStrokeColor="@color/text_input_color"
+                app:hintTextColor="@color/text_input_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTransactionDate"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btnPickTransDate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="Chọn ngày"
+                android:src="@drawable/ic_date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Ngày hết hạn"
+                app:boxStrokeColor="@color/text_input_color"
+                app:hintTextColor="@color/text_input_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtIngredientExDate"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btnPickExDate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="Chọn ngày"
+                android:src="@drawable/ic_date" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSupplierDropDown"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Nhà cung cấp"
+            app:boxStrokeColor="@color/text_input_color"
+            app:hintTextColor="@color/text_input_color">
+
+            <AutoCompleteTextView
+                android:id="@+id/supplierDropDown"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:dropDownHeight="wrap_content"
+                android:focusable="true"
+                android:importantForAccessibility="no"
+                android:inputType="none"
+                android:padding="8dp"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập ghi chú ở đây..."
+            app:boxStrokeColor="@color/text_input_color"
+            app:hintTextColor="@color/text_input_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAddTrans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="Thêm giao dịch"
+                app:backgroundTint="@color/general_button"
+                app:srcCompat="@drawable/ic_add" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Clear"
+                app:backgroundTint="#D9B7B7"
+                app:srcCompat="@drawable/ic_clear" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

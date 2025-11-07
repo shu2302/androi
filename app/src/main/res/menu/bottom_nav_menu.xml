@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_ingredient"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="Ingredients" />
+    <item
+        android:id="@+id/nav_supplier"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Suppliers" />
+    <item
+        android:id="@+id/nav_import_export"
+        android:icon="@android:drawable/ic_menu_upload_you_tube"
+        android:title="Import/Export" />
+    <item
+        android:id="@+id/nav_image"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="Images" />
+</menu>
